@@ -1,0 +1,15 @@
+{
+    "scripts": {
+        "serve": "vuepress dev docs",
+        "build": "vuepress build docs"
+    },
+    "name": "acgblog",
+    "version": "0.0.1",
+    "main": "index.js",
+    "license": "MIT",
+    "dependencies": {
+        "vuepress": "^1.8.2",
+        "vuepress-sidebar-atuo": "^1.0.3",
+        "vuepress-theme-reco": "1.6.0"
+    }
+}
