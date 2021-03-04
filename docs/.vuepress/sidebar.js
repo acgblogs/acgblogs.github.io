@@ -63,7 +63,7 @@ module.exports = {
     '/blogs/': [{
         title: '基础知识',
         collapsable: true,
-        children: getChildren('./docs/blogs')
+        children: getChildren('./docs/blogs/basic')
     }, {
         title: '前沿技术',
         collapsable: true,
