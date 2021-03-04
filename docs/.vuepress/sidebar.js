@@ -64,10 +64,9 @@ module.exports = {
         title: '基础知识',
         collapsable: true,
         children: getChildren('./docs/blogs')
-    }],
-    '/advance/': [{
+    }, {
         title: '前沿技术',
         collapsable: true,
-        children: getChildren('./docs/advance')
+        children: getChildren('./docs/blogs/advance')
     }]
 }
