@@ -10,8 +10,6 @@ tags:
 publish: true
 ---
 
-# Web移动端实现高度自适应多行文本
-
 初衷：最近刚好有H5项目需求是使用这么一个控件；如果H5仅运行在IOS的话，就没必要大费周章了，只要给dom元素增加contenteditable="true"属性，然后设置样式user-select:"auto"就可以了。这时就会有小伙伴发出疑问了，难道contenteditable属性在Android端就不支持了吗？其实不然，安卓也是支持这个属性的，但会逼死强迫症患者。至于是怎么一回事，下面让博主来揭晓：
 
 ![](https://img-blog.csdnimg.cn/20200506094326700.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzM4MTc4NzMw,size_16,color_FFFFFF,t_70)
@@ -209,5 +207,3 @@ publish: true
 </script>
 </html>
 ```
-
-> 第一次写博客，多多担待

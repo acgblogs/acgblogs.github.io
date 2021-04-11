@@ -10,6 +10,7 @@ module.exports = {
     themeConfig: {
         sidebar,
         sidebarDepth: 2,
+        subSidebar: 'auto',
         logo: '/avatar.png',
         lastUpdated: '最近更新',
         author: 'geass', // 作者

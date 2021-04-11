@@ -65,7 +65,11 @@ module.exports = {
         collapsable: true,
         children: getChildren('./docs/blogs/basic')
     }, {
-        title: '前沿技术',
+        title: '网络与安全',
+        collapsable: true,
+        children: getChildren('./docs/blogs/network')
+    }, {
+        title: '有趣的技术',
         collapsable: true,
         children: getChildren('./docs/blogs/advance')
     }]

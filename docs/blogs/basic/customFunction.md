@@ -11,10 +11,8 @@ tags:
  - apply
 publish: true
 ---
-
-::: tip Call函数
-Call方法接收两个参数(context, ...args)，context为即将改变this指向的对象，args为任意个普通参数
-:::
+## 手写call方法
+call方法接收两个参数(context, ...args)，context为即将改变this指向的对象，args为任意个普通参数
 
 ```javascript
 Function.prototype.myCall = function(context,...args){
@@ -26,10 +24,8 @@ Function.prototype.myCall = function(context,...args){
 }
 ```
   
-
-::: tip Apply函数
-Apply方法接收两个参数(context, args)，context为即将改变this指向的对象，args为单个数组对象
-:::
+## 手写apply方法
+apply方法接收两个参数(context, args)，context为即将改变this指向的对象，args为单个数组对象
 ```javascript
 Function.prototype.myApply = function(context, args = []){
     if(Object(args).constructor !== Array){
@@ -43,11 +39,9 @@ Function.prototype.myApply = function(context, args = []){
 }
 ```
   
-
-::: tip Bind函数
-Bind方法与Call方法极其相似，不同点在于bind返回的是函数而不是执行结果  
+## 手写bind方法
+bind方法与Call方法极其相似，不同点在于bind返回的是函数而不是执行结果  
 相同点是同样接收两个参数(context, ...args)，context为即将改变this指向的对象，args为任意个普通参数
-:::
 ```javascript
 Function.prototype.myBind = function(context, ...args){
     const self = this
@@ -59,4 +53,25 @@ Function.prototype.myBind = function(context, ...args){
         return result
     }
 }
+```
+  
+## 手写new
+new的本质分为以下4个步骤：  
+1. 创建一个新的对象
+2. 将构造函数中的this指向该对象
+3. 执行构造函数中的代码（为这个新对象添加属性）
+4. 返回对象（按照规范，如果函数执行值是值类型返回该新对象，如果是引用类型返回该引用）
+```javascript
+function Animal(name) {
+    this.name = name
+}
+
+function myNew(fn, ...args) {
+    const obj = Object.create(null)
+    obj.__proto = fn.prototype
+    const res = fn.apply(obj, args)
+    return res instanceof Object ? res : obj
+}
+
+myNew(Animal, '哈士奇')
 ```
