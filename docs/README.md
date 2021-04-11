@@ -4,7 +4,7 @@ title: 引言
 heroImage: /hero_bg.jpg
 heroText: 谨记
 actionText: 开始磨炼 →
-actionLink: /blogs/a.html
+actionLink: /blogs/basic/customFunction.html
 features:
 - title: 兴趣
   details: 学习的动力源于兴趣和热爱
