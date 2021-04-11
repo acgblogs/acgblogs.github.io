@@ -18,7 +18,7 @@ module.exports = {
         searchMaxSuggestions: 10,
         nav: [
             { text: '首页', link: '/' },
-            { text: '博客', link: '/blogs/customFunction.html' },
+            { text: '博客', link: '/blogs/basic/customFunction.html' },
             { text: '算法', link: '/algorithm' },
             { text: '开源社区', icon: 'reco-github', link: 'https://github.com/acgblogs' },
         ],
