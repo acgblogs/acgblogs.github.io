@@ -75,3 +75,22 @@ function myNew(fn, ...args) {
 
 myNew(Animal, '哈士奇')
 ```
+
+## 防抖函数
+
+## 节流函数
+
+## Object相关方法
+
+### Object.create()
+```javascript
+function objectCreate(obj, properties){
+    if(typeof obj !== 'object') {
+        throw new Error('Object prototype may only be an Object or null')
+    }
+    if([null, undefined].includes(properties)) {
+        throw new Error('Cannot convert undefined or null to object')
+    }
+    return { __proto__: obj }
+}
+```
