@@ -92,6 +92,7 @@
         src="music/告白气球.mp3"
         autoplay="autoplay"
         loop="true"
+        hidden="true"
       ></audio>
     </div>
     <button id="playBtn" onClick="onClickPlay()"></button>
@@ -122,8 +123,5 @@
       pauseBtn.style.display = "none";
     }
 
-    setTimeout(() => {
-      onClickPlay();
-    }, 1000);
   </script>
 </html>
