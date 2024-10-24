@@ -104,46 +104,10 @@ for (let i = 0; i < words.length; i++) {
 }
 
 var lottie = bodymovin.loadAnimation({
-  container: document.getElementById('lottie'), // Required
-  path: './asset/happy.json', // Required
-  renderer: 'html', // Required
-  loop: 1, // Optional
+  container: document.getElementById('coding'), // Required
+  path: './asset/coding.json', // Required
+  renderer: 'svg', // Required
+  loop: true, // Optional
   autoplay: true, // Optional
   name: "Miss Fang is lovely", // Name for future reference. Optional.
 });
-
-lottie.onComplete = () => {
-  bodymovin.loadAnimation({
-    container: document.getElementById('cake'), // Required
-    path: './asset/cake.json', // Required
-    renderer: 'html', // Required
-    loop: true, // Optional
-    autoplay: true, // Optional
-    name: "Miss Fang is lovely", // Name for future reference. Optional.
-  });
-}
-
-var music = null;
-
-const playMusic = () => {
-  const video = document.querySelector('video');
-  if (video) {
-    video.muted = false
-    video.play();
-    video.setAttribute('autoplay', 'autoplay');
-    music && clearInterval(music);
-  }
-};
-
-music = setInterval(() => {
-  playMusic();
-}, 1000);
-const div = document.createElement('div');
-div.innerHTML = `<video src="./asset/music.mp4" autoplay loop></video>`;
-document.body.appendChild(div);
-
-function clickMe () {
-  const clickMe = document.querySelector('.click-me');
-  clickMe && clickMe.remove();
-  playMusic();
-}
